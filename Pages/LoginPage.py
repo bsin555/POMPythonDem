@@ -31,8 +31,6 @@ class LoginPage(BasePage):
 
     """this is used to login to app"""
     def do_login(self, username, password):
-        if self.is_visible(self.CLASSIC_LOGIN):
-            self.do_click(self.CLASSIC_LOGIN)
         self.do_send_keys(self.EMAIL, username)
         self.do_send_keys(self.PASSWORD, password)
         self.do_click(self.LOGIN_BUTTON)
